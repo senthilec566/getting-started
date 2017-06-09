@@ -1,6 +1,6 @@
 
 ## How to Setup Virtual Environment ?
-  Initially clone the concord repository
+  First clone the concord repository
   
     git clone ssh://git@git.source.akamai.com:7999/concord/concord.git
     cd concord
@@ -9,7 +9,7 @@
   
     ./configure.py --vagrant
     
-  If you are trying first it will take more time ( usually ~ 2 Hrs ).
+  If you are trying first time it will take more time ( usually ~ 2 Hrs ).
 
 ## How to take action on intermittent issue like below ?
 
