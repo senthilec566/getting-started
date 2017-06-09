@@ -80,3 +80,9 @@ Execute below commands
     INFO:cmd.deploy:Verify with the mesos host: 127.0.0.1 that the service is running
     vagrant@vagrant-ubuntu-trusty-64:/vagrant/py$
    
+## Listing Vagrant VMs in your Local Machine
+    vagrant global-status 
+
+## Killing all running Vagrant VMs
+    for i in `vagrant global-status | grep virtualbox | awk '{ print $1 }'` ; do vagrant destroy $i ; done
+ 
