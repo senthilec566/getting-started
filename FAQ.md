@@ -1,24 +1,32 @@
 
 ## How to Setup Virtual Environment ?
   Initially clone the concord repository
+  
     ```git clone ssh://git@git.source.akamai.com:7999/concord/concord.git
         cd concord
     ```
+    
   Start creating virtual environment
+  
     ```./configure.py --vagrant
     ```
+    
   If you are trying first it will take more time ( usually ~ 2 Hrs ).
 
 ## How to take action on intermittent issue like below ?
+
     ```INFO interface: info: fatal: [localhost]: FAILED! => {"changed": false, "dest": "/vagrant/meta/.bolt/clang+llvm-3.9.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz", "failed": true, "msg": "Connection failure: timed out", "state": "absent", "url": "http://releases.llvm.org/3.9.0/clang+llvm-3.9.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz"}
     ```
     Vagrant get stucks and it has internal race conditions which a long setup seems to trigger.
     The work around is to simply do ```vagrant up && vagrant ssh
     ```
+    
     Then once in the machine do
+    
     ```cd /vagrant/meta
     ./ansible-playbook.pex playbooks/devbox_all.yml
     ```
+    
     That's all that should do it.
 
 ## How to correct dpkg was interrupted error ?
@@ -28,6 +36,8 @@
 
   msg: '/usr/bin/apt-get -y -o "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold"   install 'libntl0' 'libevent-dev' 'libsnappy1' 'libgoogle-glog-dev' 'libcurl3-nss' 'lttng-tools' 'zookeeperd' 'sbt' 'python-setuptools' 'ruby2.0' 'ruby2.0-dev' 'wamerican' 'mesos=0.28.0-2.0.16.ubuntu1404'' failed: E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem.
   ```
+  
   ``` vagrant ssh
   sudo dpkg --configure -a
   ```
+  
