@@ -28,7 +28,7 @@
     
  That's all that should do it.
 
-## How to correct dpkg was interrupted error ?
+## Fixing dpkg was interrupted error 
     TASK: [concord-demo | Install apt packages] ***********************************
     failed: [default] => (item=git,curl,bzip2,libntl0,libmpfr4,libssl1.0.0,libgflags2,libboost-thread1.55.0,libboost-regex1.55.0,libboost-program-options1.55.0,libboost-system1.55.0,libboost-filesystem1.55.0,libboost-date-time1.55.0,libboost-iostreams1.55.0,libevent-dev,libunwind8,libdouble-conversion1,liblz4-1,liblzma5,libsnappy1,libjemalloc1,libgoogle-glog-dev,zlib1g,libbz2-1.0,libarchive13,libcurl3-nss,libsvn1,libsasl2-2,libapr1,libasan2,lttng-tools,liblttng-ust0,zookeeperd,sbt,python-setuptools,ca-certificates,ruby2.0,ruby2.0-dev,graphviz,g++-5,g++-4.9,wamerican,build-essential,cmake,mesos=0.28.0-2.0.16.ubuntu1404) => {"failed": true, "item": "git,curl,bzip2,libntl0,libmpfr4,libssl1.0.0,libgflags2,libboost-thread1.55.0,libboost-regex1.55.0,libboost-program-options1.55.0,libboost-system1.55.0,libboost-filesystem1.55.0,libboost-date-time1.55.0,libboost-iostreams1.55.0,libevent-dev,libunwind8,libdouble-conversion1,liblz4-1,liblzma5,libsnappy1,libjemalloc1,libgoogle-glog-dev,zlib1g,libbz2-1.0,libarchive13,libcurl3-nss,libsvn1,libsasl2-2,libapr1,libasan2,lttng-tools,liblttng-ust0,zookeeperd,sbt,python-setuptools,ca-certificates,ruby2.0,ruby2.0-dev,graphviz,g++-5,g++-4.9,wamerican,build-essential,cmake,mesos=0.28.0-2.0.16.ubuntu1404"}
     stderr: E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem.
@@ -39,7 +39,7 @@ Execute below commands
 
       vagrant ssh
       sudo dpkg --configure -a
-## How to run Word Count Program in dev environment ?
+## Running Word Count Program in dev environment
     vagrant ssh
     cd /vagrant/py/
     vagrant@vagrant-ubuntu-trusty-64:/vagrant/py$ concord deploy word_counter.json
