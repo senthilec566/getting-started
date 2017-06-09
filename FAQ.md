@@ -41,7 +41,7 @@ Execute below commands
       sudo dpkg --configure -a
 ## How to run Word Count Program in dev environment ?
     vagrant ssh
-    cd /vagrant/
+    cd /vagrant/py/
     vagrant@vagrant-ubuntu-trusty-64:/vagrant/py$ concord deploy word_counter.json
     INFO:cmd.deploy:Adding tarfile: word_counter.py
     INFO:cmd.deploy:Adding tarfile: runner.bash
