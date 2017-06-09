@@ -39,3 +39,44 @@ Execute below commands
 
       vagrant ssh
       sudo dpkg --configure -a
+## How to run Word Count Program in dev environment ?
+    vagrant ssh
+    cd /vagrant/
+    vagrant@vagrant-ubuntu-trusty-64:/vagrant/py$ concord deploy word_counter.json
+    INFO:cmd.deploy:Adding tarfile: word_counter.py
+    INFO:cmd.deploy:Adding tarfile: runner.bash
+    INFO:cmd.deploy:Size of tar file is: 663.0B
+    INFO:cmd.deploy:Thrift Request: {
+    "cpus": 1.0, 
+    "disk": 2048, 
+    "executorArgs": [], 
+    "forcePullContainer": true, 
+    "forceUpdateBinary": true, 
+    "instances": 1, 
+    "mem": 512, 
+    "name": "word-counter", 
+    "slug": null, 
+    "taskHelper": {
+        "client": null, 
+        "clientArguments": [
+            "word_counter.py"
+        ], 
+        "computationAliasName": null, 
+        "dockerContainer": "", 
+        "environmentExtra": [], 
+        "execName": "runner.bash", 
+        "folder": "", 
+        "frameworkLoggingLevel": 0, 
+        "frameworkVModule": "", 
+        "proxy": null, 
+        "retries": 0, 
+        "router": null, 
+        "scheduler": null, 
+        "user": ""
+    }
+    }
+    INFO:cmd.thrift_utils:Connecting to:localhost:2181
+    INFO:cmd.deploy:Sending computation to: 127.0.0.1:11211
+    INFO:cmd.deploy:Verify with the mesos host: 127.0.0.1 that the service is running
+    vagrant@vagrant-ubuntu-trusty-64:/vagrant/py$
+   
