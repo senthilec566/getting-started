@@ -80,7 +80,7 @@ Execute below commands
     INFO:cmd.deploy:Verify with the mesos host: 127.0.0.1 that the service is running
     vagrant@vagrant-ubuntu-trusty-64:/vagrant/py$
     
-  Reason for the above problem could be more than one VM running in machine and resulted in port issue(s).
+  And verify in http://localhost:5050/ mesos cluster.
    
 ## Listing Vagrant VMs in your Local Machine
     vagrant global-status 
