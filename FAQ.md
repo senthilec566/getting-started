@@ -13,7 +13,7 @@
 
 ## How to take action on intermittent issue like below ?
 
-INFO interface: info: fatal: [localhost]: FAILED! => {"changed": false, "dest": "/vagrant/meta/.bolt/clang+llvm-3.9.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz", "failed": true, "msg": "Connection failure: timed out", "state": "absent", "url": "http://releases.llvm.org/3.9.0/clang+llvm-3.9.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz"}
+    INFO interface: info: fatal: [localhost]: FAILED! => {"changed": false, "dest": "/vagrant/meta/.bolt/clang+llvm-3.9.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz", "failed": true, "msg": "Connection failure: timed out", "state": "absent", "url": "http://releases.llvm.org/3.9.0/clang+llvm-3.9.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz"}
 
  Vagrant get stucks and it has internal race conditions which a long setup seems to trigger.
  The work around is to simply do 
