@@ -3,7 +3,7 @@
   First clone the concord repository
   
     git clone https://github.com/concord/getting-started.git
-    cd concord
+    cd concord-getting-started
     
   Start creating virtual environment
   
@@ -88,3 +88,16 @@ Execute below commands
 ## Killing all running Vagrant VMs
     for i in `vagrant global-status | grep virtualbox | awk '{ print $1 }'` ; do vagrant destroy $i ; done
  
+## Fixing apt packages install task error 
+      TASK: [concord-demo | Install apt packages] *********************************** failed: [default] => (item=git,curl,bzip2,libntl0,libmpfr4,libssl1.0.0,libgflags2,libboost-thread1.55.0,libboost-regex1.55.0,libboost-program-options1.55.0,libboost-system1.55.0,libboost-filesystem1.55.0,libboost-date-time1.55.0,libboost-iostreams1.55.0,libevent-dev,libunwind8,libdouble-conversion1,liblz4-1,liblzma5,libsnappy1,libjemalloc1,libgoogle-glog-dev,zlib1g,libbz2-1.0,libarchive13,libcurl3-nss,libsvn1,libsasl2-2,libapr1,libasan2,lttng-tools,liblttng-ust0,zookeeperd,sbt,python-setuptools,ca-certificates,ruby2.0,ruby2.0-dev,graphviz,g++-5,g++-4.9,wamerican,build-essential,cmake,mesos=0.28.0-2.0.16.ubuntu1404) => {"failed": true, "item": "git,curl,bzip2,libntl0,libmpfr4,libssl1.0.0,libgflags2,libboost-thread1.55.0,libboost-regex1.55.0,libboost-program-options1.55.0,libboost-system1.55.0,libboost-filesystem1.55.0,libboost-date-time1.55.0,libboost-iostreams1.55.0,libevent-dev,libunwind8,libdouble-conversion1,liblz4-1,liblzma5,libsnappy1,libjemalloc1,libgoogle-glog-dev,zlib1g,libbz2-1.0,libarchive13,libcurl3-nss,libsvn1,libsasl2-2,libapr1,libasan2,lttng-tools,liblttng-ust0,zookeeperd,sbt,python-setuptools,ca-certificates,ruby2.0,ruby2.0-dev,graphviz,g++-5,g++-4.9,wamerican,build-essential,cmake,mesos=0.28.0-2.0.16.ubuntu1404"}
+    stderr: E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/b/boost1.55/libboost-thread1.55.0_1.55.0-1_amd64.deb  Connection failed [IP: 91.189.88.149 80]
+
+    E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/snappy/libsnappy1_1.1.0-1ubuntu1_amd64.deb  Connection failed [IP: 91.189.88.161 80]
+
+    E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+    
+  Execute below commands and re-run
+    
+      vagrant ssh 
+      sudo apt-get update
+      
