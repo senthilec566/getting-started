@@ -1,8 +1,8 @@
 
-## How to Setup Virtual Environment ?
+## How to Setup Dev Virtual Environment ?
   First clone the concord repository
   
-    git clone ssh://git@git.source.akamai.com:7999/concord/concord.git
+    git clone https://github.com/concord/getting-started.git
     cd concord
     
   Start creating virtual environment
